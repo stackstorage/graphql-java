@@ -59,6 +59,10 @@ public class GraphQLObjectType implements GraphQLType, GraphQLOutputType, GraphQ
         return name;
     }
 
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
 
     @Override
     public String toString() {

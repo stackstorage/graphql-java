@@ -48,6 +48,11 @@ public class GraphQLInterfaceType implements GraphQLType, GraphQLOutputType, Gra
         return name;
     }
 
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
+
     public String getDescription() {
         return description;
     }

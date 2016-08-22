@@ -5,5 +5,5 @@ public interface GraphQLType {
 
     String getName();
 
-
+    String getNameForErrorMessages();
 }

@@ -82,6 +82,11 @@ public class GraphQLEnumType implements GraphQLType, GraphQLInputType, GraphQLOu
         return name;
     }
 
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
+
     public String getDescription() {
         return description;
     }

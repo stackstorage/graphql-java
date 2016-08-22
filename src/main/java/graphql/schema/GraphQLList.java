@@ -43,4 +43,9 @@ public class GraphQLList implements GraphQLType, GraphQLInputType, GraphQLOutput
     public String getName() {
         return null;
     }
+
+    @Override
+    public String getNameForErrorMessages() {
+        return "List<" + wrappedType.getNameForErrorMessages() + ">";
+    }
 }

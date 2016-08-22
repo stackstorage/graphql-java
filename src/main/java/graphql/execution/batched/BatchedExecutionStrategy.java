@@ -168,7 +168,7 @@ public class BatchedExecutionStrategy extends ExecutionStrategy {
             for (GraphQLExecutionNodeValue value : values) {
                 if (value.getValue() == null) {
                     throw new GraphQLException("Found null value for non-null type with parent: '"
-                            + parentType.getName() + "' for fields: " + fields);
+                            + parentType.getNameForErrorMessages() + "' for fields: " + fields);
                 }
             }
             while (isNonNull(fieldType)) {

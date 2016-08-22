@@ -39,6 +39,11 @@ public class GraphQLUnionType implements GraphQLType, GraphQLOutputType, GraphQL
         return name;
     }
 
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
+
     public String getDescription() {
         return description;
     }

@@ -49,4 +49,9 @@ public class GraphQLNonNull implements GraphQLType, GraphQLInputType, GraphQLOut
     public String getName() {
         return null;
     }
+
+    @Override
+    public String getNameForErrorMessages() {
+        return wrappedType.getNameForErrorMessages();
+    }
 }

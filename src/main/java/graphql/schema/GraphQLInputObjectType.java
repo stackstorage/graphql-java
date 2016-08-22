@@ -38,6 +38,11 @@ public class GraphQLInputObjectType implements GraphQLType, GraphQLInputType, Gr
         return name;
     }
 
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
+
     public String getDescription() {
         return description;
     }

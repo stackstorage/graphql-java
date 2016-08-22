@@ -19,4 +19,9 @@ public class GraphQLTypeReference implements GraphQLType, GraphQLOutputType {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String getNameForErrorMessages() {
+        return name;
+    }
 }
