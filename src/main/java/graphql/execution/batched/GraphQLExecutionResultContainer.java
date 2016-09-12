@@ -30,6 +30,6 @@ public abstract class GraphQLExecutionResultContainer {
      * @param fieldName fieldName
      * @param value value
      */
-    abstract void putResult(String fieldName, Object value);
+    public abstract void putResult(String fieldName, Object value);
 
 }

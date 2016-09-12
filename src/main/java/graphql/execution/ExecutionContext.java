@@ -14,7 +14,7 @@ import java.util.Map;
 public class ExecutionContext {
 
     private GraphQLSchema graphQLSchema;
-    private ExecutionStrategy executionStrategy;
+    private IExecutionStrategy executionStrategy;
     private Map<String, FragmentDefinition> fragmentsByName = new LinkedHashMap<String, FragmentDefinition>();
     private OperationDefinition operationDefinition;
     private Map<String, Object> variables = new LinkedHashMap<String, Object>();
@@ -73,11 +73,11 @@ public class ExecutionContext {
         return errors;
     }
 
-    public ExecutionStrategy getExecutionStrategy() {
+    public IExecutionStrategy getExecutionStrategy() {
         return executionStrategy;
     }
 
-    public void setExecutionStrategy(ExecutionStrategy executionStrategy) {
+    public void setExecutionStrategy(IExecutionStrategy executionStrategy) {
         this.executionStrategy = executionStrategy;
     }
 }

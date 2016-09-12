@@ -2,7 +2,7 @@ package graphql.execution.batched;
 
 import java.util.Map;
 
-class GraphQLExecutionNodeDatum extends GraphQLExecutionResultContainer {
+public class GraphQLExecutionNodeDatum extends GraphQLExecutionResultContainer {
     private final Map<String, Object> parentResult;
     private final Object source;
 

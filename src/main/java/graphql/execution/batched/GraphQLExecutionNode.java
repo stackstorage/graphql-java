@@ -6,7 +6,7 @@ import graphql.schema.GraphQLObjectType;
 import java.util.List;
 import java.util.Map;
 
-class GraphQLExecutionNode {
+public class GraphQLExecutionNode {
 
     private final GraphQLObjectType parentType;
     private final Map<String, List<Field>> fields;

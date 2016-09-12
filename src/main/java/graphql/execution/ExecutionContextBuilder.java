@@ -18,7 +18,7 @@ public class ExecutionContextBuilder {
         this.valuesResolver = valuesResolver;
     }
 
-    public ExecutionContext build(GraphQLSchema graphQLSchema, ExecutionStrategy executionStrategy, Object root, Document document, String operationName, Map<String, Object> args) {
+    public ExecutionContext build(GraphQLSchema graphQLSchema, IExecutionStrategy executionStrategy, Object root, Document document, String operationName, Map<String, Object> args) {
         Map<String, FragmentDefinition> fragmentsByName = new LinkedHashMap<String, FragmentDefinition>();
         Map<String, OperationDefinition> operationsByName = new LinkedHashMap<String, OperationDefinition>();
 

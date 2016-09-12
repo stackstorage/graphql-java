@@ -17,9 +17,9 @@ import java.util.Map;
 public class Execution {
 
     private FieldCollector fieldCollector = new FieldCollector();
-    private ExecutionStrategy strategy;
+    private IExecutionStrategy strategy;
 
-    public Execution(ExecutionStrategy strategy) {
+    public Execution(IExecutionStrategy strategy) {
         this.strategy = strategy;
 
         if (this.strategy == null) {

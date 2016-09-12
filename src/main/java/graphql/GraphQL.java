@@ -2,7 +2,7 @@ package graphql;
 
 
 import graphql.execution.Execution;
-import graphql.execution.ExecutionStrategy;
+import graphql.execution.IExecutionStrategy;
 import graphql.language.Document;
 import graphql.language.SourceLocation;
 import graphql.parser.Parser;
@@ -25,7 +25,7 @@ public class GraphQL {
 
 
     private final GraphQLSchema graphQLSchema;
-    private final ExecutionStrategy executionStrategy;
+    private final IExecutionStrategy executionStrategy;
 
     private static final Logger log = LoggerFactory.getLogger(GraphQL.class);
 
@@ -34,7 +34,7 @@ public class GraphQL {
     }
 
 
-    public GraphQL(GraphQLSchema graphQLSchema, ExecutionStrategy executionStrategy) {
+    public GraphQL(GraphQLSchema graphQLSchema, IExecutionStrategy executionStrategy) {
         this.graphQLSchema = graphQLSchema;
         this.executionStrategy = executionStrategy;
     }

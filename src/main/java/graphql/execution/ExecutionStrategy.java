@@ -13,13 +13,11 @@ import java.util.*;
 
 import static graphql.introspection.Introspection.*;
 
-public abstract class ExecutionStrategy {
+public abstract class ExecutionStrategy implements IExecutionStrategy {
     private static final Logger log = LoggerFactory.getLogger(ExecutionStrategy.class);
 
     protected ValuesResolver valuesResolver = new ValuesResolver();
     protected FieldCollector fieldCollector = new FieldCollector();
-
-    public abstract ExecutionResult execute(ExecutionContext executionContext, GraphQLObjectType parentType, Object source, Map<String, List<Field>> fields);
 
     protected ExecutionResult resolveField(ExecutionContext executionContext, GraphQLObjectType parentType, Object source, List<Field> fields) {
         GraphQLFieldDefinition fieldDef = getFieldDef(executionContext.getGraphQLSchema(), parentType, fields.get(0));
