@@ -37,6 +37,7 @@ import static graphql.schema.visibility.DefaultGraphqlFieldVisibility.DEFAULT_FI
 
 @Internal
 public class ValuesResolver {
+    private static final Logger log = LoggerFactory.getLogger(ValuesResolver.class);
 
     /**
      * The http://facebook.github.io/graphql/#sec-Coercing-Variable-Values says :
@@ -197,7 +198,7 @@ public class ValuesResolver {
         List<String> fieldNames = fields.stream().map(GraphQLInputObjectField::getName).collect(Collectors.toList());
         for (String inputFieldName : input.keySet()) {
             if (!fieldNames.contains(inputFieldName)) {
-                throw new InputMapDefinesTooManyFieldsException(inputObjectType, inputFieldName);
+                log.warn("This warning will become an error in the future", new InputMapDefinesTooManyFieldsException(inputObjectType, inputFieldName));
             }
         }
 
